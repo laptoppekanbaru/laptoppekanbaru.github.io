@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Laptop Pekanbaru - Rasyid Comp | Jual Laptop, PC, Upgrade & Service</title>
+    <meta name="description" content="Toko laptop Pekanbaru terpercaya dengan koleksi laptop, PC, dan layanan upgrade & service terlengkap. Harga terjangkau dengan garansi resmi. Kunjungi Rasyid Comp sekarang!">
+    <meta name="keywords" content="toko laptop pekanbaru, jual laptop pekanbaru, service laptop pekanbaru, upgrade pc pekanbaru, komputer pekanbaru, rasyid comp">
+    <meta name="author" content="Rasyid Comp">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rasyidcomp.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rasyidcomp.com/">
+    <meta property="og:title" content="Toko Laptop Pekanbaru - Rasyid Comp | Jual Laptop, PC, Upgrade & Service">
+    <meta property="og:description" content="Toko laptop Pekanbaru terpercaya dengan koleksi laptop, PC, dan layanan upgrade & service terlengkap. Harga terjangkau dengan garansi resmi.">
+    <meta property="og:image" content="https://rasyidcomp.com/images/og-image.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rasyidcomp.com/">
+    <meta property="twitter:title" content="Toko Laptop Pekanbaru - Rasyid Comp | Jual Laptop, PC, Upgrade & Service">
+    <meta property="twitter:description" content="Toko laptop Pekanbaru terpercaya dengan koleksi laptop, PC, dan layanan upgrade & service terlengkap. Harga terjangkau dengan garansi resmi.">
+    <meta property="twitter:image" content="https://rasyidcomp.com/images/twitter-image.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-laptop-code text-2xl"></i>
+                <h1 class="text-xl font-bold">Rasyid Comp - Toko Laptop Pekanbaru</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button id="search-btn" class="p-2 rounded-full hover:bg-blue-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="relative">
+                    <button id="cart-btn" class="p-2 rounded-full hover:bg-blue-500 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="cart-badge hidden">0</span>
+                    </button>
+                </div>
+                <button id="menu-btn" class="p-2 rounded-full hover:bg-blue-500 md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar (hidden by default) -->
+        <div id="search-bar" class="bg-blue-500 px-4 py-2 hidden">
+            <div class="container mx-auto relative">
+                <div class="flex">
+                    <input type="text" id="search-input" placeholder="Cari produk..."
+                        class="w-full px-4 py-2 rounded-l-lg focus:outline-none text-gray-800">
+                    <button id="search-submit" class="bg-blue-700 px-4 py-2 rounded-r-lg">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div id="search-results"
+                    class="search-results absolute left-0 right-0 mt-1 bg-white rounded-lg shadow-lg hidden">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-blue-700 hidden md:block">
+            <div class="container mx-auto px-4">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="block py-3 px-2 hover:bg-blue-600">Beranda</a></li>
+                    <li><a href="#" class="block py-3 px-2 hover:bg-blue-600">Laptop</a></li>
+                    <li><a href="#" class="block py-3 px-2 hover:bg-blue-600">PC</a></li>
+                    <li><a href="#" class="block py-3 px-2 hover:bg-blue-600">Upgrade</a></li>
+                    <li><a href="#" class="block py-3 px-2 hover:bg-blue-600">Service</a></li>
+                    <li><a href="#" class="block py-3 px-2 hover:bg-blue-600">Tentang Kami</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="bg-blue-600 text-white hidden md:hidden">
+        <ul class="py-2">
+            <li><a href="#" class="block py-2 px-4 hover:bg-blue-500">Beranda</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-blue-500">Laptop</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-blue-500">PC</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-blue-500">Upgrade</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-blue-500">Service</a></li>
+            <li><a href="#" class="block py-2 px-4 hover:bg-blue-500">Tentang Kami</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Breadcrumb Navigation -->
+        <nav class="flex py-3 px-5 text-gray-700 bg-gray-50 rounded-lg mb-4" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-home mr-2"></i>
+                        Beranda
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-gray-400 mx-2 text-sm"></i>
+                        <a href="#produk-laptop-pekanbaru" class="text-sm font-medium text-gray-700 hover:text-blue-600">Produk Laptop Pekanbaru</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-gray-400 mx-2 text-sm"></i>
+                        <span class="text-sm font-medium text-gray-500">Toko Laptop Pekanbaru</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl p-8 text-white mb-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Toko Laptop Pekanbaru Terpercaya</h2>
+                    <p class="text-lg mb-6">Rasyid Comp menyediakan laptop, PC, upgrade hardware, dan layanan service berkualitas di Pekanbaru dengan harga terbaik dan garansi resmi.</p>
+                    <button
+                        class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                        Belanja Sekarang
+                    </button>
+                </div>
+                <div class="md:w-1/2 flex justify-end">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/29/08/41/apple-1868496_1280.jpg"
+                        alt="Toko Laptop Pekanbaru - Rasyid Comp" class="rounded-lg max-h-64 shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="mb-12" id="produk-laptop-pekanbaru">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Produk Laptop Terbaik di Pekanbaru</h2>
+                <div class="flex space-x-2">
+                    <button class="px-3 py-1 bg-blue-100 text-blue-600 rounded hover:bg-blue-200">Laptop Gaming</button>
+                    <button class="px-3 py-1 bg-blue-100 text-blue-600 rounded hover:bg-blue-200">Laptop Bisnis</button>
+                    <button class="px-3 py-1 bg-blue-100 text-blue-600 rounded hover:bg-blue-200">PC & Upgrade</button>
+                </div>
+            </div>
+            <!-- Tampilan Produk -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="product-grid">
+                <!-- Produk akan ditampilkan di sini -->
+            </div>
+            <p class="text-center mt-4 text-gray-600">Toko laptop Pekanbaru dengan koleksi terlengkap dan harga terbaik. Semua produk bergaransi resmi.</p>
+            <!-- Akhir Tampilan Produk -->
+        </section>
+        
+        <!-- Blog Articles Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Blog & Artikel Toko Laptop Pekanbaru</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="blog-articles">
+                <!-- Articles will be rendered here -->
+            </div>
+            <div class="mt-6 p-4 bg-white rounded-lg shadow-md">
+                <h1 class="text-2xl font-bold text-gray-800 mb-4">Toko Laptop Pekanbaru - Rasyid Comp</h1>
+                <p class="text-gray-600 mb-3">Selamat datang di Rasyid Comp, toko laptop Pekanbaru terpercaya yang menyediakan berbagai macam laptop, PC, dan layanan komputer terlengkap. Sebagai toko laptop terkemuka di Pekanbaru, kami menawarkan produk berkualitas dengan harga terbaik dan garansi resmi.</p>
+                <p class="text-gray-600 mb-3">Kami adalah destinasi utama bagi Anda yang mencari laptop gaming, laptop bisnis, PC rakitan, atau membutuhkan layanan upgrade dan service di Pekanbaru. Tim teknisi berpengalaman kami siap membantu menyelesaikan masalah komputer Anda dengan solusi profesional.</p>
+                <p class="text-gray-600">Kunjungi showroom Rasyid Comp di Jl. Sudirman No. 123, Pekanbaru atau hubungi kami untuk konsultasi dan penawaran terbaik. Rasyid Comp - Toko Laptop Pekanbaru terpercaya pilihan masyarakat Riau.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="mb-12" id="layanan-laptop-pekanbaru">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Layanan Toko Laptop Pekanbaru</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-tools text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Service & Perbaikan Laptop Pekanbaru</h3>
+                    <p class="text-gray-600">Layanan perbaikan laptop dan PC di Pekanbaru dengan teknisi berpengalaman dan sparepart
+                        original. Kami menangani berbagai masalah hardware dan software.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-microchip text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Upgrade Hardware Laptop & PC</h3>
+                    <p class="text-gray-600">Tingkatkan performa laptop dan PC Anda di Pekanbaru dengan layanan upgrade RAM, SSD, VGA, dan komponen
+                        lainnya. Konsultasi gratis untuk rekomendasi terbaik.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-headset text-3xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Support 24/7 Toko Laptop Pekanbaru</h3>
+                    <p class="text-gray-600">Rasyid Comp siap membantu kebutuhan laptop dan PC Anda di Pekanbaru kapan saja melalui WhatsApp, email, atau telepon. Layanan konsultasi dan after-sales terbaik.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cart-drawer"
+        class="drawer fixed top-0 right-0 w-full md:w-96 h-full bg-white shadow-lg z-20 drawer-hidden">
+        <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+            <h3 class="text-lg font-semibold">Keranjang Belanja</h3>
+            <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div id="cart-items" class="p-4 overflow-y-auto" style="max-height: calc(100% - 180px);">
+            <!-- Cart items will appear here -->
+            <p class="text-gray-500 text-center py-8">Keranjang belanja Anda kosong</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 bg-white">
+            <div class="flex justify-between mb-4">
+                <span class="font-semibold">Total:</span>
+                <span id="cart-total" class="font-bold text-blue-600">Rp 0</span>
+            </div>
+            <button id="checkout-btn"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50" disabled>
+                Checkout via WhatsApp
+            </button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+
+    <!-- Order Form Modal -->
+    <div id="order-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-30 flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-md mx-4">
+            <div class="p-4 border-b border-gray-200 flex justify-between items-center">
+                <h3 class="text-lg font-semibold">Formulir Pemesanan</h3>
+                <button id="close-order-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-4">
+                <form id="order-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                        <input type="text" id="name"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700 mb-2">Nomor WhatsApp</label>
+                        <input type="tel" id="phone"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block text-gray-700 mb-2">Alamat (Opsional)</label>
+                        <textarea id="address" rows="2"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="notes" class="block text-gray-700 mb-2">Catatan Tambahan</label>
+                        <textarea id="notes" rows="2"
+                            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div class="mt-6">
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            Kirim Pesanan via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Rasyid Comp - Toko Laptop Pekanbaru</h3>
+                    <p class="text-gray-400">Toko laptop Pekanbaru terpercaya menyediakan solusi lengkap untuk kebutuhan laptop, PC, upgrade, dan service komputer dengan harga terbaik dan garansi resmi.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Kontak Toko Laptop Pekanbaru</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
+                            <span>Jl. Sudirman No. 123, Pekanbaru, Riau</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-blue-400"></i>
+                            <span>(0761) 1234-5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-blue-400"></i>
+                            <span>0812-3456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-400"></i>
+                            <span>info@rasyidcomp.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Jam Operasional</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Senin-Jumat</span>
+                            <span>09:00 - 18:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sabtu</span>
+                            <span>10:00 - 15:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Minggu</span>
+                            <span>Tutup</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Media Sosial</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Rasyid Comp - Toko Laptop Pekanbaru. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Rasyid Comp - Toko Laptop Pekanbaru",
+      "image": "https://rasyidcomp.com/images/logo.jpg",
+      "@id": "https://rasyidcomp.com",
+      "url": "https://rasyidcomp.com",
+      "telephone": "(0761) 1234-5678",
+      "priceRange": "Rp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Sudirman No. 123",
+        "addressLocality": "Pekanbaru",
+        "postalCode": "28000",
+        "addressRegion": "Riau",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0.5070677,
+        "longitude": 101.4478793
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "15:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/rasyidcomp",
+        "https://www.instagram.com/rasyidcomp",
+        "https://twitter.com/rasyidcomp"
+      ],
+      "description": "Toko laptop Pekanbaru terpercaya dengan koleksi laptop, PC, dan layanan upgrade & service terlengkap. Harga terjangkau dengan garansi resmi."
+    }
+    </script>
+    
+    <script src="./js/articles.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/render_products.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+/* Custom CSS for additional styling */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 12px;
+    background-color: #ef4444;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drawer {
+    transition: transform 0.3s ease-in-out;
+}
+
+.drawer-hidden {
+    transform: translateX(100%);
+}
+
+.search-results {
+    max-height: 300px;
+    overflow-y: auto;
+}
